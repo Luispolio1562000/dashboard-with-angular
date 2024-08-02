@@ -1,16 +1,16 @@
-<form action="">
+<form (ngSubmit)=" onSubmit(enteredTitle.value)" #form>
 <app-control [inputData]="{for: 'title', title: 'Title'} " >
-  <input name="title" id="title" type="text">
+  <input #enteredTitle name="title" id="title" type="text" placeholder="Ingresa la solicitud" >
 </app-control>
 
 <app-control  [inputData]="{for: 'request', title:'request'}"> 
   
-        <textarea name="request" id="request" type="text" rows="3"> </textarea>
+        <textarea [(ngModel)]="enteredRequest" name="request" id="request" type="text" rows="3" placeholder="Describe la solicitud"> </textarea>
 
 </app-control>
   
   <p>
-    <button appButton>
+    <button type="submit" appButton>
       Submit
 
       <span ngProjectAs="icon" > ⌲ </span>
