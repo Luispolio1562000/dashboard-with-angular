@@ -3,10 +3,12 @@
   <input name="title" id="title" type="text">
 </app-control>
 
-  <p>
-    <label for="request">Request</label>
-    <textarea name="request" id="request" type="text" rows="3"> </textarea>
-  </p>
+<app-control  [inputData]="{for: 'request', title:'request'}"> 
+  
+        <textarea name="request" id="request" type="text" rows="3"> </textarea>
+
+</app-control>
+  
   <p>
     <button appButton>
       Submit
