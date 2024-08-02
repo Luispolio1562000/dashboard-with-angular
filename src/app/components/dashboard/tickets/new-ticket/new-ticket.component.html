@@ -1,0 +1,17 @@
+<form action="">
+<app-control [inputData]="{for: 'title', title: 'Title'} " >
+  <input name="title" id="title" type="text">
+</app-control>
+
+  <p>
+    <label for="request">Request</label>
+    <textarea name="request" id="request" type="text" rows="3"> </textarea>
+  </p>
+  <p>
+    <button appButton>
+      Submit
+
+      <span ngProjectAs="icon" > ⌲ </span>
+    </button>
+  </p>
+</form>
