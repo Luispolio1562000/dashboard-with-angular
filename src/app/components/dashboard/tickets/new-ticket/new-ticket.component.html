@@ -1,14 +1,15 @@
 <form (ngSubmit)=" onSubmit(enteredTitle.value)" #form>
-<app-control [inputData]="{for: 'title', title: 'Title'} " >
-  <input #enteredTitle name="title" id="title" type="text" placeholder="Ingresa la solicitud" >
+<app-control [inputData]="{for: 'title', title: 'Title'} "  >
+  <!-- Template variable #name -->
+  <input #enteredTitle name="title" id="title" type="text" placeholder="Ingresa la solicitud" #input >
 </app-control>
 
-<app-control  [inputData]="{for: 'request', title:'request'}"> 
-  
-        <textarea [(ngModel)]="enteredRequest" name="request" id="request" type="text" rows="3" placeholder="Describe la solicitud"> </textarea>
+<app-control  [inputData]="{for: 'request', title:'Request'}">
+
+        <textarea [(ngModel)]="enteredRequest" name="request" id="request" type="text" rows="3" placeholder="Describe la solicitud" #input> </textarea>
 
 </app-control>
-  
+
   <p>
     <button type="submit" appButton>
       Submit
